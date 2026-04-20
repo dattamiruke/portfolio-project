@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Core Stack — Variations Preview</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .variant-wrap { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    .variant { border: 1px solid #ccc; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #fff; }
+    .variant h2.variant-label { margin-top: 0; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; color: #666; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
+    .variant-note { font-size: 0.85rem; color: #666; margin-top: -0.5rem; margin-bottom: 1rem; }
+
+    /* ===== Variant A: Category cards grid ===== */
+    .stack-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+    .stack-card { border: 1px solid #e2e6ec; border-radius: 8px; padding: 1rem 1.1rem; background: #fafbfd; }
+    .stack-card h3 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; color: #4a5568; margin-bottom: 0.7rem; border-bottom: 1px solid #e2e6ec; padding-bottom: 0.4rem; }
+    .stack-card ul { list-style: none; padding: 0; margin: 0; }
+    .stack-card li { font-size: 0.92rem; padding: 0.2rem 0; color: #2d3748; }
+
+    /* ===== Variant B: Pill/chip groups ===== */
+    .stack-pills-section { margin-bottom: 1.4rem; }
+    .stack-pills-section h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.07em; color: #4a5568; margin-bottom: 0.5rem; }
+    .stack-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .stack-pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; background: #edf2f7; color: #2d3748; border: 1px solid #dde3ea; }
+    .stack-pill.primary { background: #2c3e50; color: #fff; border-color: #2c3e50; font-weight: 600; }
+
+    /* ===== Variant C: Layered architecture stack ===== */
+    .stack-layers { display: flex; flex-direction: column; gap: 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .stack-layer { border-radius: 6px; padding: 0.7rem 1rem; display: grid; grid-template-columns: 180px 1fr; gap: 1rem; align-items: center; }
+    .stack-layer .layer-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: rgba(255,255,255,0.9); }
+    .stack-layer .layer-items { font-size: 0.9rem; color: rgba(255,255,255,0.95); }
+    .layer-ai { background: linear-gradient(90deg, #6b46c1, #805ad5); }
+    .layer-obs { background: linear-gradient(90deg, #2b6cb0, #4299e1); }
+    .layer-sec { background: linear-gradient(90deg, #c05621, #dd6b20); }
+    .layer-ops { background: linear-gradient(90deg, #2f855a, #48bb78); }
+    .layer-cloud { background: linear-gradient(90deg, #2d3748, #4a5568); }
+
+    /* ===== Variant D: Two-column "primary + supporting" ===== */
+    .stack-matrix { display: grid; grid-template-columns: 170px 1fr 1fr; gap: 0.5rem 1rem; align-items: start; border-top: 1px solid #e2e6ec; padding-top: 0.8rem; }
+    .stack-matrix .mx-head { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #718096; font-weight: 700; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e6ec; }
+    .stack-matrix .mx-cat { font-weight: 600; color: #2d3748; padding: 0.65rem 0; border-bottom: 1px dashed #eee; }
+    .stack-matrix .mx-cell { padding: 0.65rem 0; border-bottom: 1px dashed #eee; font-size: 0.92rem; color: #4a5568; }
+    .stack-matrix .mx-cell.primary { color: #1a365d; font-weight: 600; }
+  </style>
+</head>
+<body class="theme-light">
+
+<div class="variant-wrap">
+  <h1>Core Stack — 4 Variations</h1>
+  <p>Reviewing alternative layouts for the Core Stack section. Current site uses the plain heading + bullet list version.</p>
+
+  <!-- =========================== VARIANT A =========================== -->
+  <div class="variant">
+    <h2 class="variant-label">Variant A — Category cards (grid)</h2>
+    <p class="variant-note">Balanced visual. Each category is a self-contained card; easy to scan in a single glance, still readable on mobile.</p>
+
+    <div class="stack-cards">
+
+      <div class="stack-card">
+        <h3>AI / Agent Systems</h3>
+        <ul>
+          <li>LLM Control Planes</li>
+          <li>LangChain / LangGraph</li>
+          <li>RAG Pipelines</li>
+          <li>Multi-Agent Orchestration</li>
+          <li>Prompt Engineering Frameworks</li>
+        </ul>
+      </div>
+
+      <div class="stack-card">
+        <h3>Cloud &amp; Infrastructure</h3>
+        <ul>
+          <li>AWS (EKS, Lambda, S3, RDS, Bedrock)</li>
+          <li>Multi-Region HA Architectures</li>
+          <li>Event-Driven Systems (SNS/SQS, Step Functions)</li>
+        </ul>
+      </div>
+
+      <div class="stack-card">
+        <h3>DevOps / IaC</h3>
+        <ul>
+          <li>Terraform, AWS CDK</li>
+          <li>GitHub Actions, GitOps</li>
+          <li>Kubernetes (EKS, CRDs, Controllers)</li>
+        </ul>
+      </div>
+
+      <div class="stack-card">
+        <h3>Observability</h3>
+        <ul>
+          <li>OpenTelemetry</li>
+          <li>Prometheus, Grafana</li>
+          <li>ELK, CloudWatch</li>
+        </ul>
+      </div>
+
+      <div class="stack-card">
+        <h3>Security &amp; Governance</h3>
+        <ul>
+          <li>OPA (Policy-as-Code)</li>
+          <li>RBAC, Zero Trust</li>
+          <li>AI Guardrails</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================== VARIANT B =========================== -->
+  <div class="variant">
+    <h2 class="variant-label">Variant B — Pill / chip groups</h2>
+    <p class="variant-note">Dense, scannable, feels modern. "Primary" items are highlighted so recruiters see your headline skills first. Good pairing with the existing tag cloud if kept lean.</p>
+
+    <div class="stack-pills-section">
+      <h3>AI / Agent Systems</h3>
+      <div class="stack-pills">
+        <span class="stack-pill primary">LLM Control Planes</span>
+        <span class="stack-pill primary">Multi-Agent Orchestration</span>
+        <span class="stack-pill">LangChain</span>
+        <span class="stack-pill">LangGraph</span>
+        <span class="stack-pill">RAG Pipelines</span>
+        <span class="stack-pill">Prompt Engineering</span>
+      </div>
+    </div>
+
+    <div class="stack-pills-section">
+      <h3>Cloud &amp; Infrastructure</h3>
+      <div class="stack-pills">
+        <span class="stack-pill primary">AWS</span>
+        <span class="stack-pill primary">Multi-Region HA</span>
+        <span class="stack-pill">EKS</span>
+        <span class="stack-pill">Lambda</span>
+        <span class="stack-pill">Bedrock</span>
+        <span class="stack-pill">Step Functions</span>
+        <span class="stack-pill">SNS / SQS</span>
+        <span class="stack-pill">S3</span>
+        <span class="stack-pill">RDS</span>
+      </div>
+    </div>
+
+    <div class="stack-pills-section">
+      <h3>DevOps / IaC</h3>
+      <div class="stack-pills">
+        <span class="stack-pill primary">Kubernetes</span>
+        <span class="stack-pill primary">Terraform</span>
+        <span class="stack-pill">AWS CDK</span>
+        <span class="stack-pill">GitHub Actions</span>
+        <span class="stack-pill">GitOps</span>
+        <span class="stack-pill">CRDs / Controllers</span>
+      </div>
+    </div>
+
+    <div class="stack-pills-section">
+      <h3>Observability</h3>
+      <div class="stack-pills">
+        <span class="stack-pill primary">OpenTelemetry</span>
+        <span class="stack-pill">Prometheus</span>
+        <span class="stack-pill">Grafana</span>
+        <span class="stack-pill">ELK</span>
+        <span class="stack-pill">CloudWatch</span>
+      </div>
+    </div>
+
+    <div class="stack-pills-section">
+      <h3>Security &amp; Governance</h3>
+      <div class="stack-pills">
+        <span class="stack-pill primary">OPA / Policy-as-Code</span>
+        <span class="stack-pill">RBAC</span>
+        <span class="stack-pill">Zero Trust</span>
+        <span class="stack-pill">AI Guardrails</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =========================== VARIANT C =========================== -->
+  <div class="variant">
+    <h2 class="variant-label">Variant C — Layered architecture stack</h2>
+    <p class="variant-note">Visually evokes a platform stack (AI on top, infra at base). Strongest "system-level thinking" signal — reinforces Principal-architect positioning. Slight cost: more visual weight.</p>
+
+    <div class="stack-layers">
+      <div class="stack-layer layer-ai">
+        <span class="layer-label">AI / Agents</span>
+        <span class="layer-items">LLM Control Planes · Multi-Agent Orchestration · LangChain/Graph · RAG · Prompt Frameworks</span>
+      </div>
+      <div class="stack-layer layer-obs">
+        <span class="layer-label">Observability</span>
+        <span class="layer-items">OpenTelemetry · Prometheus · Grafana · ELK · CloudWatch</span>
+      </div>
+      <div class="stack-layer layer-sec">
+        <span class="layer-label">Security / Gov</span>
+        <span class="layer-items">OPA (Policy-as-Code) · RBAC · Zero Trust · AI Guardrails</span>
+      </div>
+      <div class="stack-layer layer-ops">
+        <span class="layer-label">DevOps / IaC</span>
+        <span class="layer-items">Kubernetes (EKS, CRDs, Controllers) · Terraform · AWS CDK · GitHub Actions · GitOps</span>
+      </div>
+      <div class="stack-layer layer-cloud">
+        <span class="layer-label">Cloud / Infra</span>
+        <span class="layer-items">AWS (EKS, Lambda, S3, RDS, Bedrock) · Multi-Region HA · Event-Driven (SNS/SQS, Step Functions)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================== VARIANT D =========================== -->
+  <div class="variant">
+    <h2 class="variant-label">Variant D — Primary + supporting matrix</h2>
+    <p class="variant-note">Two-column split: "Primary" (where you lead) vs "Supporting" (working knowledge). Most honest/precise framing — useful for senior roles where recruiters want to know depth vs breadth.</p>
+
+    <div class="stack-matrix">
+      <div class="mx-head">Category</div>
+      <div class="mx-head">Primary</div>
+      <div class="mx-head">Supporting</div>
+
+      <div class="mx-cat">AI / Agents</div>
+      <div class="mx-cell primary">LLM Control Planes · Multi-Agent Orchestration · RAG Pipelines</div>
+      <div class="mx-cell">LangChain · LangGraph · Prompt Engineering</div>
+
+      <div class="mx-cat">Cloud / Infra</div>
+      <div class="mx-cell primary">AWS (EKS, Lambda, Bedrock) · Multi-Region HA</div>
+      <div class="mx-cell">Step Functions · SNS/SQS · S3 · RDS</div>
+
+      <div class="mx-cat">DevOps / IaC</div>
+      <div class="mx-cell primary">Kubernetes · Terraform · GitOps</div>
+      <div class="mx-cell">AWS CDK · GitHub Actions · CRDs / Controllers</div>
+
+      <div class="mx-cat">Observability</div>
+      <div class="mx-cell primary">OpenTelemetry · Prometheus / Grafana</div>
+      <div class="mx-cell">ELK · CloudWatch · DORA Metrics</div>
+
+      <div class="mx-cat">Security / Gov</div>
+      <div class="mx-cell primary">OPA · AI Guardrails</div>
+      <div class="mx-cell">RBAC · Zero Trust · Policy-as-Code</div>
+    </div>
+  </div>
+
+  <p style="margin-top:2rem;padding:1rem;background:#fffbea;border-left:4px solid #f2c14e;">
+    <strong>How to pick:</strong>
+    A = safe &amp; balanced ·
+    B = modern/dense, pairs with tag cloud ·
+    C = visual &quot;platform stack&quot; statement ·
+    D = depth-honest, senior-friendly framing.
+  </p>
+
+</div>
+
+</body>
+</html>

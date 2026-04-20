@@ -11,7 +11,8 @@
 <header>
   <h1>Dattaram Miruke</h1>
   <p class="subtitle">Principal AI Platform Architect | DevOps | Kubernetes | AWS | Distributed Systems</p>
-  <p class="meta">Sacramento, CA &middot; <a href="mailto:dattamiruke@gmail.com">dattamiruke@gmail.com</a></p>
+  <p class="meta">Sacramento, CA &middot; <a href="mailto:dattamiruke@gmail.com">dattamiruke@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/dattamiruke/" target="_blank" rel="noopener">LinkedIn</a></p>
+  <p class="resume-download"><a href="assets/pdf/original.pdf" download="Dattaram-Miruke-Resume.pdf" class="resume-btn">Download Resume (PDF)</a></p>
   <button id="themeToggle" class="toggle" onclick="cycleTheme()">Theme: Light</button>
 </header>
 
@@ -31,54 +32,65 @@
 
 <section>
   <h2>Flagship Projects</h2>
+  <div class="projects-grid">
 
-  <article class="project">
-    <h3>AEGIS — AI Trust &amp; Evaluation Framework</h3>
-    <p>Governance, evaluation, and safety layer for agentic AI systems.</p>
-    <ul>
-      <li>LLM evaluation pipelines (RAGAS, DeepEval)</li>
-      <li>Policy enforcement (OPA, RBAC)</li>
-      <li>Observability + scoring engine</li>
-      <li>Multi-agent validation workflows</li>
-    </ul>
-    <p><a href="https://github.com/dattamiruke/aegis">github.com/dattamiruke/aegis</a></p>
-  </article>
+    <article class="project">
+      <span class="project-tag">AI Governance</span>
+      <h3>AEGIS</h3>
+      <p class="project-tagline">AI Trust &amp; Evaluation Framework</p>
+      <p>Governance, evaluation, and safety layer for agentic AI systems.</p>
+      <ul>
+        <li>LLM evaluation pipelines (RAGAS, DeepEval)</li>
+        <li>Policy enforcement (OPA, RBAC)</li>
+        <li>Observability + scoring engine</li>
+        <li>Multi-agent validation workflows</li>
+      </ul>
+      <a class="project-link" href="https://github.com/dattamiruke/aegis" target="_blank" rel="noopener">github.com/dattamiruke/aegis &rarr;</a>
+    </article>
 
-  <article class="project">
-    <h3>DevOps Agent — Infra Generation System</h3>
-    <p>AI agent that converts intent into Terraform + CI/CD pipelines.</p>
-    <ul>
-      <li>Multi-cloud infra generation (AWS / Kubernetes)</li>
-      <li>Architecture scoring engine</li>
-      <li>CI/CD automation (GitHub Actions)</li>
-      <li>Plan preview + validation</li>
-    </ul>
-    <p><a href="https://github.com/dattamiruke/devops-agent">github.com/dattamiruke/devops-agent</a></p>
-  </article>
+    <article class="project">
+      <span class="project-tag">DevOps AI</span>
+      <h3>DevOps Agent</h3>
+      <p class="project-tagline">Infrastructure Generation System</p>
+      <p>AI agent that converts intent into Terraform + CI/CD pipelines.</p>
+      <ul>
+        <li>Multi-cloud infra generation (AWS / Kubernetes)</li>
+        <li>Architecture scoring engine</li>
+        <li>CI/CD automation (GitHub Actions)</li>
+        <li>Plan preview + validation</li>
+      </ul>
+      <a class="project-link" href="https://github.com/dattamiruke/devops-agent" target="_blank" rel="noopener">github.com/dattamiruke/devops-agent &rarr;</a>
+    </article>
 
-  <article class="project">
-    <h3>RAG Platform — Document Intelligence System</h3>
-    <p>End-to-end ingestion → embedding → retrieval → evaluation.</p>
-    <ul>
-      <li>Semantic search pipelines (vector + metadata)</li>
-      <li>PromptBuilder for structured prompt generation</li>
-      <li>Multi-channel ingestion (docs, APIs, streams)</li>
-      <li>Persistent AI memory (OpenBrain integration)</li>
-    </ul>
-    <p><a href="https://github.com/dattamiruke/rag-platform">github.com/dattamiruke/rag-platform</a></p>
-  </article>
+    <article class="project">
+      <span class="project-tag">Retrieval</span>
+      <h3>RAG Platform</h3>
+      <p class="project-tagline">Document Intelligence System</p>
+      <p>End-to-end ingestion &rarr; embedding &rarr; retrieval &rarr; evaluation.</p>
+      <ul>
+        <li>Semantic search pipelines (vector + metadata)</li>
+        <li>PromptBuilder for structured prompt generation</li>
+        <li>Multi-channel ingestion (docs, APIs, streams)</li>
+        <li>Persistent AI memory (Mnemos integration)</li>
+      </ul>
+      <a class="project-link" href="https://github.com/dattamiruke/rag-platform" target="_blank" rel="noopener">github.com/dattamiruke/rag-platform &rarr;</a>
+    </article>
 
-  <article class="project">
-    <h3>OpenBrain — Persistent AI Memory System</h3>
-    <p>Vector + metadata-based memory for context-aware agents.</p>
-    <ul>
-      <li>Long-term memory for LLM systems</li>
-      <li>Context enrichment pipelines</li>
-      <li>Multi-agent memory sharing</li>
-      <li>Retrieval optimization</li>
-    </ul>
-    <p><a href="https://github.com/dattamiruke/openbrain">github.com/dattamiruke/openbrain</a></p>
-  </article>
+    <article class="project">
+      <span class="project-tag">Memory</span>
+      <h3>Mnemos</h3>
+      <p class="project-tagline">Persistent AI Memory System</p>
+      <p>Vector + metadata-based memory for context-aware agents.</p>
+      <ul>
+        <li>Long-term memory for LLM systems</li>
+        <li>Context enrichment pipelines</li>
+        <li>Multi-agent memory sharing</li>
+        <li>Retrieval optimization</li>
+      </ul>
+      <a class="project-link" href="https://github.com/dattamiruke/mnemos" target="_blank" rel="noopener">github.com/dattamiruke/mnemos &rarr;</a>
+    </article>
+
+  </div>
 </section>
 
 <section>
@@ -92,100 +104,196 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
 
 <section>
   <h2>Core Stack</h2>
+  <p class="stack-hint">Click any skill to expand.</p>
 
-  <h3>AI / Agent Systems</h3>
-  <ul>
-    <li>LLM Control Planes</li>
-    <li>LangChain / LangGraph</li>
-    <li>RAG Pipelines</li>
-    <li>Multi-Agent Orchestration</li>
-    <li>Prompt Engineering Frameworks</li>
-  </ul>
+  <div class="stack-group">
+    <h3>AI / Agent Systems</h3>
+    <details class="skill">
+      <summary>LLM Control Planes</summary>
+      <div class="skill-body">
+        Central routing, policy, and cost-optimization layer that sits in front of multiple LLM providers. Handles model selection, fallbacks, rate limits, auth, prompt/response logging, and per-tenant quotas — turning a collection of model APIs into a governed platform surface.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>LangChain / LangGraph</summary>
+      <div class="skill-body">
+        Frameworks for composing LLM-powered applications. LangChain provides chains, tools, retrievers, and memory primitives. LangGraph layers a graph-based state machine on top — enabling cycles, branching, and multi-agent flows that plain chains cannot express cleanly.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>RAG Pipelines</summary>
+      <div class="skill-body">
+        Retrieval-Augmented Generation: ingest documents, chunk, embed, store in a vector DB (+ metadata index), retrieve top-k at query time, and feed into the prompt. Ends with evaluation (RAGAS, DeepEval) on faithfulness, answer relevance, and context precision.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>Multi-Agent Orchestration</summary>
+      <div class="skill-body">
+        Coordinating multiple specialized agents (e.g. planner, executor, critic, evaluator) around a shared task. Requires routing, message passing, shared/scoped memory, tool permissions, and deterministic handoff — plus guardrails so one misbehaving agent doesn't blow up the workflow.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>Prompt Engineering Frameworks</summary>
+      <div class="skill-body">
+        Structured prompt composition: templates, few-shot example libraries, role/system prompt separation, output-schema enforcement (JSON mode, function calling), and regression testing of prompts like code — so prompt changes don't silently degrade production quality.
+      </div>
+    </details>
+  </div>
 
-  <h3>Cloud &amp; Infrastructure</h3>
-  <ul>
-    <li>AWS (EKS, Lambda, S3, RDS, Bedrock)</li>
-    <li>Multi-Region HA Architectures</li>
-    <li>Event-Driven Systems (SNS/SQS, Step Functions)</li>
-  </ul>
+  <div class="stack-group">
+    <h3>Cloud &amp; Infrastructure</h3>
+    <details class="skill">
+      <summary>AWS — EKS, Lambda, S3, RDS, Bedrock</summary>
+      <div class="skill-body">
+        Core AWS surface: EKS for Kubernetes control plane, Lambda for event-driven compute, S3 for durable object storage, RDS for managed relational DBs, and Bedrock as the managed-LLM entrypoint for foundation models (Claude, Llama, Titan).
+      </div>
+    </details>
+    <details class="skill">
+      <summary>Multi-Region HA Architectures</summary>
+      <div class="skill-body">
+        Active-active and active-passive deployments spanning multiple AWS regions. Covers cross-region replication (S3, RDS, DynamoDB global tables), Route53 failover, regional isolation of blast radius, and DR runbooks that are rehearsed, not just documented.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>Event-Driven Systems — SNS/SQS, Step Functions</summary>
+      <div class="skill-body">
+        Asynchronous workflows: SNS for pub/sub fan-out, SQS for durable decoupling + retries + DLQs, Step Functions for long-running state machines. Turns synchronous RPC chains into resilient pipelines where each stage can fail and be replayed independently.
+      </div>
+    </details>
+  </div>
 
-  <h3>DevOps / IaC</h3>
-  <ul>
-    <li>Terraform, AWS CDK</li>
-    <li>GitHub Actions, GitOps</li>
-    <li>Kubernetes (EKS, CRDs, Controllers)</li>
-  </ul>
+  <div class="stack-group">
+    <h3>DevOps / IaC</h3>
+    <details class="skill">
+      <summary>Terraform, AWS CDK</summary>
+      <div class="skill-body">
+        Declarative infrastructure-as-code. Terraform for multi-cloud / provider-agnostic work with state management and reusable modules. AWS CDK for AWS-native workflows that benefit from a real programming language (Python/TypeScript) and higher-level constructs.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>GitHub Actions, GitOps</summary>
+      <div class="skill-body">
+        CI/CD pipelines defined as YAML next to the code. GitOps takes this further — cluster/infra state is continuously reconciled against what's in Git (ArgoCD, Flux), so the repo is the source of truth and rollbacks are just git reverts.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>Kubernetes — EKS, CRDs, Controllers</summary>
+      <div class="skill-body">
+        Container orchestration plus the operator pattern: Custom Resource Definitions extend the K8s API, and controllers watch those resources and drive the world toward declared state. The cleanest way to encode platform logic inside the cluster itself.
+      </div>
+    </details>
+  </div>
 
-  <h3>Observability</h3>
-  <ul>
-    <li>OpenTelemetry</li>
-    <li>Prometheus, Grafana</li>
-    <li>ELK, CloudWatch</li>
-  </ul>
+  <div class="stack-group">
+    <h3>Observability</h3>
+    <details class="skill">
+      <summary>OpenTelemetry</summary>
+      <div class="skill-body">
+        Vendor-neutral instrumentation standard for traces, metrics, and logs. SDKs emit data in a common format; the collector routes it to any backend (Prometheus, Jaeger, Datadog, CloudWatch). Breaks the lock-in between application code and observability vendor.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>Prometheus, Grafana</summary>
+      <div class="skill-body">
+        Prometheus pulls and stores time-series metrics with a powerful query language (PromQL). Grafana sits on top for dashboards, alerting, and visual exploration. The de-facto open-source monitoring pair for Kubernetes and cloud-native workloads.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>ELK, CloudWatch</summary>
+      <div class="skill-body">
+        ELK (Elasticsearch + Logstash + Kibana) for searchable, structured log aggregation across many services. CloudWatch for AWS-native metrics, logs, and alarms tightly integrated with every AWS service. Often run side-by-side — one for apps, one for infra.
+      </div>
+    </details>
+  </div>
 
-  <h3>Security &amp; Governance</h3>
-  <ul>
-    <li>OPA (Policy-as-Code)</li>
-    <li>RBAC, Zero Trust</li>
-    <li>AI Guardrails</li>
-  </ul>
+  <div class="stack-group">
+    <h3>Security &amp; Governance</h3>
+    <details class="skill">
+      <summary>OPA — Policy-as-Code</summary>
+      <div class="skill-body">
+        Open Policy Agent: a general-purpose policy engine that evaluates Rego rules. Decouples authorization logic from application code so the same policies enforce K8s admission, API authorization, and Terraform plan checks — policy becomes a versioned artifact.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>RBAC, Zero Trust</summary>
+      <div class="skill-body">
+        RBAC — access tied to roles and bindings, enforced at every API boundary. Zero Trust — drop the network perimeter assumption; every request is authenticated, authorized, and encrypted regardless of origin. Identity becomes the new perimeter.
+      </div>
+    </details>
+    <details class="skill">
+      <summary>AI Guardrails</summary>
+      <div class="skill-body">
+        Input and output controls around LLM calls: prompt-injection defense, PII redaction, content policy filters, hallucination / groundedness checks, and refusal handling. The "hard edges" that make an otherwise-stochastic model safe to put in front of users.
+      </div>
+    </details>
+  </div>
+
 </section>
 
 <section>
   <h2>Skills &mdash; Tag Cloud</h2>
   <div class="tag-cloud">
-    <span class="tag tag-xl">AI Platforms</span>
-    <span class="tag tag-xl">Kubernetes</span>
-    <span class="tag tag-xl">AWS</span>
-    <span class="tag tag-xl">Terraform</span>
-    <span class="tag tag-xl">LLM Control Planes</span>
+    <span class="tag tag-xl cat-core">AI Platforms</span>
+    <span class="tag tag-xl cat-core">Kubernetes</span>
+    <span class="tag tag-xl cat-core">AWS</span>
+    <span class="tag tag-xl cat-core">Terraform</span>
+    <span class="tag tag-xl cat-core">LLM Control Planes</span>
 
-    <span class="tag tag-lg">Multi-Agent Systems</span>
-    <span class="tag tag-lg">RAG Pipelines</span>
-    <span class="tag tag-lg">LangChain</span>
-    <span class="tag tag-lg">LangGraph</span>
-    <span class="tag tag-lg">EKS</span>
-    <span class="tag tag-lg">GitHub Actions</span>
-    <span class="tag tag-lg">Python</span>
-    <span class="tag tag-lg">FastAPI</span>
-    <span class="tag tag-lg">Observability</span>
-    <span class="tag tag-lg">OpenTelemetry</span>
+    <span class="tag tag-lg cat-ai">Multi-Agent Systems</span>
+    <span class="tag tag-lg cat-ai">RAG Pipelines</span>
+    <span class="tag tag-lg cat-ai">LangChain</span>
+    <span class="tag tag-lg cat-ai">LangGraph</span>
+    <span class="tag tag-lg cat-cloud">EKS</span>
+    <span class="tag tag-lg cat-devops">GitHub Actions</span>
+    <span class="tag tag-lg cat-lang">Python</span>
+    <span class="tag tag-lg cat-lang">FastAPI</span>
+    <span class="tag tag-lg cat-obs">Observability</span>
+    <span class="tag tag-lg cat-obs">OpenTelemetry</span>
 
-    <span class="tag tag-md">Prometheus</span>
-    <span class="tag tag-md">Grafana</span>
-    <span class="tag tag-md">Lambda</span>
-    <span class="tag tag-md">Bedrock</span>
-    <span class="tag tag-md">Step Functions</span>
-    <span class="tag tag-md">SNS/SQS</span>
-    <span class="tag tag-md">Event-Driven Systems</span>
-    <span class="tag tag-md">Multi-Region HA</span>
-    <span class="tag tag-md">AWS CDK</span>
-    <span class="tag tag-md">GitOps</span>
-    <span class="tag tag-md">CRDs</span>
-    <span class="tag tag-md">Controllers</span>
-    <span class="tag tag-md">OPA</span>
-    <span class="tag tag-md">RBAC</span>
-    <span class="tag tag-md">Zero Trust</span>
-    <span class="tag tag-md">AI Guardrails</span>
-    <span class="tag tag-md">Go</span>
-    <span class="tag tag-md">Prompt Engineering</span>
+    <span class="tag tag-md cat-obs">Prometheus</span>
+    <span class="tag tag-md cat-obs">Grafana</span>
+    <span class="tag tag-md cat-cloud">Lambda</span>
+    <span class="tag tag-md cat-cloud">Bedrock</span>
+    <span class="tag tag-md cat-cloud">Step Functions</span>
+    <span class="tag tag-md cat-cloud">SNS/SQS</span>
+    <span class="tag tag-md cat-cloud">Event-Driven Systems</span>
+    <span class="tag tag-md cat-cloud">Multi-Region HA</span>
+    <span class="tag tag-md cat-cloud">AWS CDK</span>
+    <span class="tag tag-md cat-devops">GitOps</span>
+    <span class="tag tag-md cat-devops">CRDs</span>
+    <span class="tag tag-md cat-devops">Controllers</span>
+    <span class="tag tag-md cat-security">OPA</span>
+    <span class="tag tag-md cat-security">RBAC</span>
+    <span class="tag tag-md cat-security">Zero Trust</span>
+    <span class="tag tag-md cat-security">AI Guardrails</span>
+    <span class="tag tag-md cat-lang">Go</span>
+    <span class="tag tag-md cat-ai">Prompt Engineering</span>
 
-    <span class="tag tag-sm">S3</span>
-    <span class="tag tag-sm">RDS</span>
-    <span class="tag tag-sm">ELK</span>
-    <span class="tag tag-sm">CloudWatch</span>
-    <span class="tag tag-sm">Vector DBs</span>
-    <span class="tag tag-sm">Semantic Search</span>
-    <span class="tag tag-sm">Policy-as-Code</span>
-    <span class="tag tag-sm">Distributed Systems</span>
-    <span class="tag tag-sm">Chaos Engineering</span>
-    <span class="tag tag-sm">OpenStack</span>
-    <span class="tag tag-sm">SDN / NFV</span>
-    <span class="tag tag-sm">HPC</span>
-    <span class="tag tag-sm">CUDA</span>
-    <span class="tag tag-sm">DORA Metrics</span>
-    <span class="tag tag-sm">RAGAS</span>
-    <span class="tag tag-sm">DeepEval</span>
+    <span class="tag tag-sm cat-cloud">S3</span>
+    <span class="tag tag-sm cat-cloud">RDS</span>
+    <span class="tag tag-sm cat-obs">ELK</span>
+    <span class="tag tag-sm cat-obs">CloudWatch</span>
+    <span class="tag tag-sm cat-ai">Vector DBs</span>
+    <span class="tag tag-sm cat-ai">Semantic Search</span>
+    <span class="tag tag-sm cat-security">Policy-as-Code</span>
+    <span class="tag tag-sm cat-lang">Distributed Systems</span>
+    <span class="tag tag-sm cat-devops">Chaos Engineering</span>
+    <span class="tag tag-sm cat-lang">OpenStack</span>
+    <span class="tag tag-sm cat-lang">SDN / NFV</span>
+    <span class="tag tag-sm cat-lang">HPC</span>
+    <span class="tag tag-sm cat-lang">CUDA</span>
+    <span class="tag tag-sm cat-obs">DORA Metrics</span>
+    <span class="tag tag-sm cat-ai">RAGAS</span>
+    <span class="tag tag-sm cat-ai">DeepEval</span>
+  </div>
+  <div class="tag-legend">
+    <span class="legend-item"><span class="legend-dot cat-core"></span> Core</span>
+    <span class="legend-item"><span class="legend-dot cat-ai"></span> AI / LLM</span>
+    <span class="legend-item"><span class="legend-dot cat-cloud"></span> Cloud</span>
+    <span class="legend-item"><span class="legend-dot cat-devops"></span> DevOps</span>
+    <span class="legend-item"><span class="legend-dot cat-obs"></span> Observability</span>
+    <span class="legend-item"><span class="legend-dot cat-security"></span> Security</span>
+    <span class="legend-item"><span class="legend-dot cat-lang"></span> Languages / Systems</span>
   </div>
 </section>
 
@@ -226,9 +334,9 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
 <section>
   <h2>Thought Leadership</h2>
   <ul>
-    <li>Agentic Assurance Index (Upcoming — arXiv)</li>
-    <li>"Routing in the Internet" — CRC Press</li>
-    <li>Early security research (USENIX)</li>
+    <li><a href="#" target="_blank" rel="noopener">Agentic Assurance Index</a> &mdash; Upcoming on arXiv</li>
+    <li><a href="#" target="_blank" rel="noopener">"Routing in the Internet"</a> &mdash; CRC Press</li>
+    <li><a href="#" target="_blank" rel="noopener">Early security research</a> &mdash; USENIX</li>
   </ul>
 </section>
 
@@ -241,13 +349,61 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
 
 <section>
   <h2>Philosophy</h2>
-  <blockquote>
-    Build systems that are observable, scalable, secure, and explainable.
-  </blockquote>
+  <div class="philosophy-rotator" id="philosophyRotator" title="Click to advance">
+    <blockquote class="philosophy-quote active">
+      <span class="quote-text">Build systems that are observable, scalable, secure, and explainable.</span>
+      <span class="quote-tag">Platform</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Fail fast, learn faster &mdash; resilience is forged from cheap failures.</span>
+      <span class="quote-tag">DevOps</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">You can't improve what you can't observe.</span>
+      <span class="quote-tag">SRE</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Infrastructure as code is an operating discipline, not a tool.</span>
+      <span class="quote-tag">IaC</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Automate the painful, document the rare, delete the obsolete.</span>
+      <span class="quote-tag">Platform</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">A model without evaluation is an opinion, not a system.</span>
+      <span class="quote-tag">AI / ML</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Data quality is the ceiling; models only approach it.</span>
+      <span class="quote-tag">DNN</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Context and memory turn an LLM into a teammate.</span>
+      <span class="quote-tag">LLM</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Every autonomous agent needs a leash &mdash; governance before autonomy.</span>
+      <span class="quote-tag">AI Safety</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Latency, cost, quality &mdash; pick your tradeoffs or the model picks for you.</span>
+      <span class="quote-tag">LLM Ops</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Reproducibility is the line between research and engineering.</span>
+      <span class="quote-tag">ML Eng</span>
+    </blockquote>
+    <blockquote class="philosophy-quote">
+      <span class="quote-text">Abstractions should hide complexity, not multiply it.</span>
+      <span class="quote-tag">Architecture</span>
+    </blockquote>
+  </div>
+  <div class="philosophy-dots" id="philosophyDots"></div>
 </section>
 
 <footer>
-  <p>&copy; Dattaram Miruke &middot; <a href="https://github.com/dattamiruke">github.com/dattamiruke</a></p>
+  <p>&copy; Dattaram Miruke &middot; <a href="https://github.com/dattamiruke" target="_blank" rel="noopener">GitHub</a> &middot; <a href="https://www.linkedin.com/in/dattamiruke/" target="_blank" rel="noopener">LinkedIn</a></p>
 </footer>
 
 <script>
@@ -268,6 +424,40 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
   }
 
   applyTheme(themes[idx]);
+
+  /* Philosophy rotator */
+  const phQuotes = document.querySelectorAll(".philosophy-quote");
+  const phDots = document.getElementById("philosophyDots");
+  const phRotator = document.getElementById("philosophyRotator");
+  let phIdx = 0;
+  let phTimer = null;
+
+  phQuotes.forEach((_, i) => {
+    const d = document.createElement("span");
+    d.className = "philosophy-dot" + (i === 0 ? " active" : "");
+    d.addEventListener("click", () => showQuote(i, true));
+    phDots.appendChild(d);
+  });
+  const dots = phDots.querySelectorAll(".philosophy-dot");
+
+  function showQuote(n, resetTimer) {
+    phQuotes[phIdx].classList.remove("active");
+    dots[phIdx].classList.remove("active");
+    phIdx = (n + phQuotes.length) % phQuotes.length;
+    phQuotes[phIdx].classList.add("active");
+    dots[phIdx].classList.add("active");
+    if (resetTimer) startRotate();
+  }
+
+  function startRotate() {
+    clearInterval(phTimer);
+    phTimer = setInterval(() => showQuote(phIdx + 1, false), 6000);
+  }
+
+  phRotator.addEventListener("click", () => showQuote(phIdx + 1, true));
+  phRotator.addEventListener("mouseenter", () => clearInterval(phTimer));
+  phRotator.addEventListener("mouseleave", startRotate);
+  startRotate();
 </script>
 
 </body>

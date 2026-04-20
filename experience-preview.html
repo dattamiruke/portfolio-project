@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience Section — Variations Preview</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .variant-wrap { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    .variant { border: 1px solid var(--border, #ccc); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; background: var(--card, #fff); }
+    .variant h2.variant-label { margin-top: 0; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; color: #666; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
+
+    /* Variant A: timeline */
+    .exp-timeline { list-style: none; padding: 0; margin: 0; }
+    .exp-timeline li { border-left: 3px solid #6ea8fe; padding: 0.25rem 0 1rem 1rem; margin: 0; position: relative; }
+    .exp-timeline li::before { content: ""; width: 11px; height: 11px; border-radius: 50%; background: #6ea8fe; position: absolute; left: -7px; top: 0.55rem; }
+    .exp-timeline .role { font-weight: 600; font-size: 1.05rem; }
+    .exp-timeline .org { color: #666; font-size: 0.92rem; }
+    .exp-timeline .yrs { color: #888; font-size: 0.82rem; font-variant-numeric: tabular-nums; margin-left: 0.5rem; }
+    .exp-timeline .impact { margin: 0.4rem 0 0; font-size: 0.95rem; }
+
+    /* Variant B: dense one-liner */
+    .exp-compact { list-style: none; padding: 0; margin: 0; }
+    .exp-compact li { display: grid; grid-template-columns: 100px 1fr; gap: 0.8rem; padding: 0.6rem 0; border-bottom: 1px dashed #e0e0e0; font-size: 0.95rem; }
+    .exp-compact .yrs { color: #888; font-variant-numeric: tabular-nums; }
+    .exp-compact .role { font-weight: 600; }
+    .exp-compact .org { color: #666; }
+    .exp-compact .impact { display: block; color: #444; margin-top: 0.15rem; }
+
+    /* Variant C: problem/solution/impact cards */
+    .exp-cards { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    .exp-card { border: 1px solid #e2e2e2; border-radius: 6px; padding: 1rem 1.2rem; background: #fafafa; }
+    .exp-card .head { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline; margin-bottom: 0.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.35rem; }
+    .exp-card .role { font-weight: 600; font-size: 1.02rem; }
+    .exp-card .org { color: #666; font-size: 0.9rem; }
+    .exp-card .psi { display: grid; grid-template-columns: 80px 1fr; gap: 0.3rem 0.9rem; font-size: 0.93rem; }
+    .exp-card .psi dt { font-weight: 600; color: #2b6cb0; }
+    .exp-card .psi dd { margin: 0; }
+  </style>
+</head>
+<body class="theme-light">
+
+<div class="variant-wrap">
+  <h1>Experience Section — 3 Variations</h1>
+  <p>Pick the one that best fits a 10–15 second recruiter scan, or mix/match. Current site uses the original bulleted-list version.</p>
+
+  <!-- ========== Variant A: Timeline ========== -->
+  <div class="variant">
+    <h2 class="variant-label">Variant A — Timeline + impact line</h2>
+    <p style="font-size:0.85rem;color:#666;margin-top:-0.5rem;">Visual career arc. One impact line per role — scannable, but still shows the trajectory.</p>
+
+    <ul class="exp-timeline">
+      <li>
+        <div><span class="role">Principal AI Platform Architect</span> <span class="org">— Inferloop</span> <span class="yrs">2023 — Present</span></div>
+        <p class="impact">Built multi-agent AI platform (Kubernetes + multi-LLM gateways, LLM control plane, governance). Shipped OpenBrain memory system.</p>
+      </li>
+      <li>
+        <div><span class="role">AWS DevOps Architect</span> <span class="org">— Consulting</span> <span class="yrs">2020 — 2023</span></div>
+        <p class="impact">Multi-region HA architectures with event-driven backbones (Lambda / Step Functions / SNS+SQS) and Terraform-first CI/CD.</p>
+      </li>
+      <li>
+        <div><span class="role">Senior DevOps Engineer</span> <span class="org">— Amazon</span> <span class="yrs">2017 — 2020</span></div>
+        <p class="impact">Distributed event-driven systems, IaC platforms on AWS CDK, observability on CloudWatch + DORA metrics.</p>
+      </li>
+      <li>
+        <div><span class="role">Platform Engineer</span> <span class="org">— Cisco / HP / Earlier</span> <span class="yrs">Earlier</span></div>
+        <p class="impact">Kubernetes CRDs &amp; controllers, chaos engineering, OpenStack / SDN / NFV — foundational distributed-systems work.</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ========== Variant B: Compact one-liner ========== -->
+  <div class="variant">
+    <h2 class="variant-label">Variant B — Compact one-liner table</h2>
+    <p style="font-size:0.85rem;color:#666;margin-top:-0.5rem;">Maximum density. A recruiter sees your whole career in ~3 seconds. Sacrifices depth for skim speed.</p>
+
+    <ul class="exp-compact">
+      <li>
+        <span class="yrs">2023 — Now</span>
+        <span><span class="role">Principal AI Platform Architect</span> <span class="org">· Inferloop</span>
+          <span class="impact">Multi-agent AI platform · LLM control plane · OpenBrain memory · AI governance.</span>
+        </span>
+      </li>
+      <li>
+        <span class="yrs">2020 — 2023</span>
+        <span><span class="role">AWS DevOps Architect</span> <span class="org">· Consulting</span>
+          <span class="impact">Multi-region HA · event-driven systems · Terraform &amp; CI/CD pipelines.</span>
+        </span>
+      </li>
+      <li>
+        <span class="yrs">2017 — 2020</span>
+        <span><span class="role">Senior DevOps Engineer</span> <span class="org">· Amazon</span>
+          <span class="impact">Event-driven distributed systems · AWS CDK · observability + DORA metrics.</span>
+        </span>
+      </li>
+      <li>
+        <span class="yrs">Earlier</span>
+        <span><span class="role">Platform Engineer</span> <span class="org">· Cisco / HP / Others</span>
+          <span class="impact">K8s CRDs &amp; controllers · chaos engineering · OpenStack / SDN / NFV.</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ========== Variant C: Problem / Solution / Impact cards ========== -->
+  <div class="variant">
+    <h2 class="variant-label">Variant C — Problem → Solution → Impact cards</h2>
+    <p style="font-size:0.85rem;color:#666;margin-top:-0.5rem;">Storytelling frame. Each role reads as "what was broken, what I built, what it moved." Strongest for Staff/Principal narratives.</p>
+
+    <div class="exp-cards">
+
+      <div class="exp-card">
+        <div class="head">
+          <span><span class="role">Principal AI Platform Architect</span> <span class="org">— Inferloop</span></span>
+          <span class="org">2023 — Present</span>
+        </div>
+        <dl class="psi">
+          <dt>Problem</dt><dd>Agentic AI workloads had no evaluation, routing, or governance layer — every team rebuilt the same scaffolding.</dd>
+          <dt>Solution</dt><dd>Designed a K8s-native LLM control plane with multi-provider routing, policy enforcement, and OpenBrain memory (vector + metadata).</dd>
+          <dt>Impact</dt><dd>Unified agent platform across teams, RAGAS/DeepEval-backed eval, policy-as-code guardrails on every call.</dd>
+        </dl>
+      </div>
+
+      <div class="exp-card">
+        <div class="head">
+          <span><span class="role">AWS DevOps Architect</span> <span class="org">— Consulting</span></span>
+          <span class="org">2020 — 2023</span>
+        </div>
+        <dl class="psi">
+          <dt>Problem</dt><dd>Clients needed multi-region HA workloads but lacked event-driven backbones and repeatable IaC.</dd>
+          <dt>Solution</dt><dd>Built Terraform module libraries + Lambda / Step Functions / SNS-SQS event meshes; rolled GitHub Actions CI/CD on top.</dd>
+          <dt>Impact</dt><dd>Cut time-to-new-region from weeks to days; made disaster-recovery a config change, not a project.</dd>
+        </dl>
+      </div>
+
+      <div class="exp-card">
+        <div class="head">
+          <span><span class="role">Senior DevOps Engineer</span> <span class="org">— Amazon</span></span>
+          <span class="org">2017 — 2020</span>
+        </div>
+        <dl class="psi">
+          <dt>Problem</dt><dd>Scaling event-driven services without a shared IaC + observability baseline.</dd>
+          <dt>Solution</dt><dd>Built AWS CDK-based IaC platforms and CloudWatch + DORA-metric observability frameworks.</dd>
+          <dt>Impact</dt><dd>Standardized service bootstrapping; deployment + MTTR metrics became visible org-wide.</dd>
+        </dl>
+      </div>
+
+      <div class="exp-card">
+        <div class="head">
+          <span><span class="role">Platform Engineer</span> <span class="org">— Cisco / HP / Earlier</span></span>
+          <span class="org">Earlier</span>
+        </div>
+        <dl class="psi">
+          <dt>Problem</dt><dd>Large-scale distributed systems needed resilience primitives and operational discipline.</dd>
+          <dt>Solution</dt><dd>Wrote K8s CRDs + controllers, ran chaos-engineering programs, built OpenStack / SDN / NFV components.</dd>
+          <dt>Impact</dt><dd>Foundational distributed-systems experience — the ground layer beneath everything after.</dd>
+        </dl>
+      </div>
+
+    </div>
+  </div>
+
+  <p style="margin-top:2rem;padding:1rem;background:#fffbea;border-left:4px solid #f2c14e;">
+    <strong>Note on dates:</strong> the year ranges above are placeholders — I inferred them from the resume positioning in memory. Confirm / correct before applying to the live site.
+  </p>
+
+</div>
+
+</body>
+</html>
