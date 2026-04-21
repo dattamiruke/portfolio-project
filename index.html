@@ -10,9 +10,19 @@
 
 <header>
   <h1>Dattaram Miruke</h1>
-  <p class="subtitle">Principal AI Platform Architect | DevOps | Kubernetes | AWS | Distributed Systems</p>
+  <p class="subtitle" id="hero-headline">Principal AI Platform Architect | DevOps | Kubernetes | AWS | Distributed Systems</p>
   <p class="meta">Sacramento, CA &middot; <a href="mailto:dattamiruke@gmail.com">dattamiruke@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/dattamiruke/" target="_blank" rel="noopener">LinkedIn</a></p>
-  <p class="resume-download"><a href="assets/pdf/original.pdf" download="Dattaram-Miruke-Resume.pdf" class="resume-btn">Download Resume (PDF)</a></p>
+  <p class="resume-download"><a id="resume-link" href="assets/pdf/original.pdf" download="Dattaram-Miruke-Resume.pdf" class="resume-btn">Download Resume (PDF)</a></p>
+  <div class="role-switcher" id="roleSwitcher" hidden>
+    <label for="roleSelect">Hiring for:</label>
+    <select id="roleSelect">
+      <option value="">— Select role —</option>
+      <option value="platform">Platform / Infra</option>
+      <option value="mlops">MLOps</option>
+      <option value="rag">RAG / Applied GenAI</option>
+      <option value="genai-lead">GenAI Engineering Lead</option>
+    </select>
+  </div>
   <button id="themeToggle" class="toggle" onclick="cycleTheme()">Theme: Light</button>
 </header>
 
@@ -34,7 +44,7 @@
   <h2>Flagship Projects</h2>
   <div class="projects-grid">
 
-    <article class="project">
+    <article class="project" data-repo-id="aegis">
       <span class="project-tag">AI Governance</span>
       <h3>AEGIS</h3>
       <p class="project-tagline">AI Trust &amp; Evaluation Framework</p>
@@ -48,7 +58,7 @@
       <a class="project-link" href="https://github.com/dattamiruke/aegis" target="_blank" rel="noopener">github.com/dattamiruke/aegis &rarr;</a>
     </article>
 
-    <article class="project">
+    <article class="project" data-repo-id="devops-agent">
       <span class="project-tag">DevOps AI</span>
       <h3>DevOps Agent</h3>
       <p class="project-tagline">Infrastructure Generation System</p>
@@ -62,7 +72,7 @@
       <a class="project-link" href="https://github.com/dattamiruke/devops-agent" target="_blank" rel="noopener">github.com/dattamiruke/devops-agent &rarr;</a>
     </article>
 
-    <article class="project">
+    <article class="project" data-repo-id="rag-platform">
       <span class="project-tag">Retrieval</span>
       <h3>RAG Platform</h3>
       <p class="project-tagline">Document Intelligence System</p>
@@ -76,7 +86,7 @@
       <a class="project-link" href="https://github.com/dattamiruke/rag-platform" target="_blank" rel="noopener">github.com/dattamiruke/rag-platform &rarr;</a>
     </article>
 
-    <article class="project">
+    <article class="project" data-repo-id="mnemos">
       <span class="project-tag">Memory</span>
       <h3>Mnemos</h3>
       <p class="project-tagline">Persistent AI Memory System</p>
@@ -459,6 +469,8 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
   phRotator.addEventListener("mouseleave", startRotate);
   startRotate();
 </script>
+
+<script src="assets/roles.js" defer></script>
 
 </body>
 </html>

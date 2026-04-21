@@ -1,0 +1,32 @@
+{
+  "default": {
+    "headline": "Principal AI Platform Architect | DevOps | Kubernetes | AWS | Distributed Systems",
+    "resume": "assets/pdf/resume-general.pdf",
+    "repos": ["aegis", "devops-agent", "rag-platform", "mnemos"],
+    "banner": null
+  },
+  "platform": {
+    "headline": "AI Platform Architect — Infra, Governance, Scale",
+    "resume": "assets/pdf/resume-platform.pdf",
+    "repos": ["aegis", "devops-agent"],
+    "banner": "Tailored view for Platform / Infra roles"
+  },
+  "mlops": {
+    "headline": "MLOps / AI Platform Engineering Lead",
+    "resume": "assets/pdf/resume-mlops.pdf",
+    "repos": ["devops-agent", "aegis"],
+    "banner": "Tailored view for MLOps roles"
+  },
+  "rag": {
+    "headline": "Applied GenAI — RAG & Retrieval Systems",
+    "resume": "assets/pdf/resume-rag.pdf",
+    "repos": ["rag-platform", "mnemos", "aegis"],
+    "banner": "Tailored view for RAG / Applied GenAI roles"
+  },
+  "genai-lead": {
+    "headline": "GenAI Engineering Lead",
+    "resume": "assets/pdf/resume-genai-lead.pdf",
+    "repos": ["aegis", "rag-platform", "mnemos", "devops-agent"],
+    "banner": "Tailored view for GenAI leadership roles"
+  }
+}

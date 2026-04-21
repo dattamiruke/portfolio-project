@@ -676,3 +676,44 @@ body.dark .philosophy-quote { color: #c9d1d9; }
 body.dark .philosophy-quote .quote-tag { color: #79c0ff; }
 body.dark .philosophy-dot { background: #30363d; }
 body.dark .philosophy-dot.active { background: #58a6ff; }
+
+/* Role-tailoring: banner + self-select switcher */
+.role-banner {
+  background: #eef3ff;
+  color: #1a3a8a;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #ccd;
+}
+.role-banner a {
+  margin-left: 0.25rem;
+  color: #1a3a8a;
+  text-decoration: underline;
+}
+
+.role-switcher {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.role-switcher label { margin-right: 0.25rem; }
+.role-switcher select {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9rem;
+}
+
+/* White theme parity (inherits from light by default; explicit for clarity) */
+body.theme-white .role-banner { background: #f0f4ff; color: #1a3a8a; border-bottom-color: #d6dcee; }
+
+/* Dark theme parity */
+body.dark .role-banner {
+  background: #172033;
+  color: #9ab6e0;
+  border-bottom-color: #2b3a55;
+}
+body.dark .role-banner a { color: #9ab6e0; }
+body.dark .role-switcher select {
+  background: #161b22;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
