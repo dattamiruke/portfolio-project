@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" role="img" aria-label="Reference AI platform architecture">
+  <defs>
+    <linearGradient id="boxFill" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eef3fa"/>
+    </linearGradient>
+    <linearGradient id="crossFill" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e7"/>
+      <stop offset="100%" stop-color="#fdeec5"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0077cc"/>
+    </marker>
+    <style><![CDATA[
+      .box { fill: url(#boxFill); stroke: #0077cc; stroke-width: 1.5; rx: 10; }
+      .cross { fill: url(#crossFill); stroke: #b8860b; stroke-width: 1.5; rx: 10; }
+      .label { font: 600 13px -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #1a3a6a; text-anchor: middle; }
+      .sublabel { font: 11px -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #4a5568; text-anchor: middle; }
+      .crossLabel { fill: #6b501a; }
+      .flow { stroke: #0077cc; stroke-width: 2; fill: none; }
+      .crossEdge { stroke: #b8860b; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+      .title { font: 600 12px -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #6b501a; text-anchor: middle; }
+    ]]></style>
+  </defs>
+
+  <!-- Main flow row -->
+  <g>
+    <rect class="box" x="20"  y="60" width="120" height="60"/>
+    <text class="label"    x="80" y="86">User</text>
+    <text class="sublabel" x="80" y="104">Web / API client</text>
+
+    <rect class="box" x="170" y="60" width="130" height="60"/>
+    <text class="label"    x="235" y="86">API Gateway</text>
+    <text class="sublabel" x="235" y="104">AuthN / Z, rate-limit</text>
+
+    <rect class="box" x="330" y="60" width="150" height="60"/>
+    <text class="label"    x="405" y="86">LLM Control Plane</text>
+    <text class="sublabel" x="405" y="104">Routing, cost, fallback</text>
+
+    <rect class="box" x="510" y="60" width="160" height="60"/>
+    <text class="label"    x="590" y="86">Agent Orchestrator</text>
+    <text class="sublabel" x="590" y="104">Planner / Executor / Critic</text>
+
+    <rect class="box" x="700" y="60" width="200" height="60"/>
+    <text class="label"    x="800" y="86">Tool Execution Layer</text>
+    <text class="sublabel" x="800" y="104">APIs, code, retrievers</text>
+  </g>
+
+  <!-- Memory row -->
+  <g>
+    <rect class="box" x="510" y="170" width="160" height="60"/>
+    <text class="label"    x="590" y="196">Memory</text>
+    <text class="sublabel" x="590" y="214">Vector + metadata index</text>
+  </g>
+
+  <!-- Cross-cutting band -->
+  <g>
+    <rect class="cross" x="20"  y="270" width="270" height="70"/>
+    <text class="title" x="155" y="290">CROSS-CUTTING</text>
+    <text class="label crossLabel"    x="155" y="312">Observability + Evaluation</text>
+    <text class="sublabel"  x="155" y="328">OTel · Prometheus · RAGAS</text>
+
+    <rect class="cross" x="320" y="270" width="270" height="70"/>
+    <text class="title" x="455" y="290">GOVERNANCE</text>
+    <text class="label crossLabel"    x="455" y="312">Policy Enforcement</text>
+    <text class="sublabel"  x="455" y="328">OPA · RBAC · Guardrails</text>
+
+    <rect class="cross" x="620" y="270" width="280" height="70"/>
+    <text class="title" x="760" y="290">PLATFORM</text>
+    <text class="label crossLabel"    x="760" y="312">Kubernetes / AWS</text>
+    <text class="sublabel"  x="760" y="328">EKS · Lambda · S3 · Bedrock</text>
+  </g>
+
+  <!-- Main horizontal arrows -->
+  <line class="flow" x1="140" y1="90" x2="170" y2="90" marker-end="url(#arrow)"/>
+  <line class="flow" x1="300" y1="90" x2="330" y2="90" marker-end="url(#arrow)"/>
+  <line class="flow" x1="480" y1="90" x2="510" y2="90" marker-end="url(#arrow)"/>
+  <line class="flow" x1="670" y1="90" x2="700" y2="90" marker-end="url(#arrow)"/>
+
+  <!-- Memory bidirectional with orchestrator -->
+  <line class="flow" x1="590" y1="120" x2="590" y2="170" marker-end="url(#arrow)"/>
+  <line class="flow" x1="600" y1="170" x2="600" y2="120" marker-end="url(#arrow)"/>
+
+  <!-- Cross-cutting dashed connections from cross band up to flow row -->
+  <line class="crossEdge" x1="155" y1="270" x2="235" y2="120"/>
+  <line class="crossEdge" x1="455" y1="270" x2="405" y2="120"/>
+  <line class="crossEdge" x1="455" y1="270" x2="590" y2="170"/>
+  <line class="crossEdge" x1="760" y1="270" x2="800" y2="120"/>
+</svg>

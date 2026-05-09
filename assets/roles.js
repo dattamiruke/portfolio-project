@@ -34,6 +34,12 @@
   const headlineEl = document.getElementById("hero-headline");
   if (headlineEl && cfg.headline) headlineEl.textContent = cfg.headline;
 
+  if (cfg.headline) {
+    const pageTitle = "Dattaram Miruke — " + cfg.headline.split("|")[0].trim();
+    document.title = pageTitle;
+    document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(m => m.setAttribute("content", pageTitle));
+  }
+
   const visible = new Set(cfg.repos || []);
   document.querySelectorAll("[data-repo-id]").forEach(el => {
     el.hidden = visible.size > 0 && !visible.has(el.dataset.repoId);

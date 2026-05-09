@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dattaram Miruke — Principal AI Platform Architect</title>
+  <meta name="description" content="Principal AI Platform Architect — production-grade AI platforms, Kubernetes, AWS, multi-agent systems, RAG, AI governance.">
+  <meta name="author" content="Dattaram Miruke">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Dattaram Miruke — Principal AI Platform Architect">
+  <meta property="og:description" content="AI platforms, Kubernetes, AWS, multi-agent systems, RAG, AI governance.">
+  <meta property="og:url" content="https://github.com/dattamiruke/portfolio-project">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dattaram Miruke — Principal AI Platform Architect">
+  <meta name="twitter:description" content="AI platforms, Kubernetes, AWS, multi-agent systems, RAG, AI governance.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +33,7 @@
       <option value="genai-lead">GenAI Engineering Lead</option>
     </select>
   </div>
-  <button id="themeToggle" class="toggle" onclick="cycleTheme()">Theme: Light</button>
+  <button id="themeToggle" class="toggle">Theme: Light</button>
 </header>
 
 <section>
@@ -55,7 +65,7 @@
         <li>Observability + scoring engine</li>
         <li>Multi-agent validation workflows</li>
       </ul>
-      <a class="project-link" href="https://github.com/dattamiruke/aegis" target="_blank" rel="noopener">github.com/dattamiruke/aegis &rarr;</a>
+      <span class="project-link project-link-pending">Repo link coming soon</span>
     </article>
 
     <article class="project" data-repo-id="devops-agent">
@@ -69,7 +79,7 @@
         <li>CI/CD automation (GitHub Actions)</li>
         <li>Plan preview + validation</li>
       </ul>
-      <a class="project-link" href="https://github.com/dattamiruke/devops-agent" target="_blank" rel="noopener">github.com/dattamiruke/devops-agent &rarr;</a>
+      <span class="project-link project-link-pending">Repo link coming soon</span>
     </article>
 
     <article class="project" data-repo-id="rag-platform">
@@ -83,7 +93,7 @@
         <li>Multi-channel ingestion (docs, APIs, streams)</li>
         <li>Persistent AI memory (Mnemos integration)</li>
       </ul>
-      <a class="project-link" href="https://github.com/dattamiruke/rag-platform" target="_blank" rel="noopener">github.com/dattamiruke/rag-platform &rarr;</a>
+      <span class="project-link project-link-pending">Repo link coming soon</span>
     </article>
 
     <article class="project" data-repo-id="mnemos">
@@ -97,7 +107,7 @@
         <li>Multi-agent memory sharing</li>
         <li>Retrieval optimization</li>
       </ul>
-      <a class="project-link" href="https://github.com/dattamiruke/mnemos" target="_blank" rel="noopener">github.com/dattamiruke/mnemos &rarr;</a>
+      <span class="project-link project-link-pending">Repo link coming soon</span>
     </article>
 
   </div>
@@ -105,11 +115,7 @@
 
 <section>
   <h2>Architecture Focus</h2>
-<pre>
-User → API Gateway → LLM Control Plane → Agent Orchestrator
-     → Tool Execution Layer → Memory (Vector + Metadata)
-     → Observability + Evaluation → Policy Enforcement
-</pre>
+  <img src="assets/images/architecture.svg" alt="Reference architecture: User → API Gateway → LLM Control Plane → Agent Orchestrator → Tool Execution → Memory → Observability + Evaluation + Policy Enforcement" class="architecture-diagram">
 </section>
 
 <section>
@@ -344,9 +350,9 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
 <section>
   <h2>Thought Leadership</h2>
   <ul>
-    <li><a href="#" target="_blank" rel="noopener">Agentic Assurance Index</a> &mdash; Upcoming on arXiv</li>
-    <li><a href="#" target="_blank" rel="noopener">"Routing in the Internet"</a> &mdash; CRC Press</li>
-    <li><a href="#" target="_blank" rel="noopener">Early security research</a> &mdash; USENIX</li>
+    <li>Agentic Assurance Index &mdash; <em>Upcoming on arXiv</em></li>
+    <li><a href="https://www.researchgate.net/profile/Dattaram-Miruke" target="_blank" rel="noopener">"Routing in the Internet"</a> &mdash; CRC Press</li>
+    <li><a href="https://dl.acm.org/doi/10.1145/320435.320547" target="_blank" rel="noopener">A Security Analysis of VAX VMS</a> &mdash; ACM Annual Conference, 1985</li>
   </ul>
 </section>
 
@@ -417,6 +423,7 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
 </footer>
 
 <script>
+(() => {
   const themes = ["light", "white", "dark"];
   const labels = { light: "Theme: Light", white: "Theme: White", dark: "Theme: Dark" };
   let idx = 0;
@@ -433,6 +440,7 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
     applyTheme(themes[idx]);
   }
 
+  document.getElementById("themeToggle").addEventListener("click", cycleTheme);
   applyTheme(themes[idx]);
 
   /* Philosophy rotator */
@@ -468,6 +476,7 @@ User → API Gateway → LLM Control Plane → Agent Orchestrator
   phRotator.addEventListener("mouseenter", () => clearInterval(phTimer));
   phRotator.addEventListener("mouseleave", startRotate);
   startRotate();
+})();
 </script>
 
 <script src="assets/roles.js" defer></script>
