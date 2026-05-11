@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEGIS — AI Trust &amp; Evaluation Framework</title>
+  <meta name="description" content="AEGIS — governance, evaluation, and safety layer for agentic AI systems. Live Swagger API + open-source codebase.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      padding: 40px;
+    }
+
+    header { text-align: center; margin-bottom: 50px; }
+    header h1 { font-size: 2.4rem; margin-bottom: 10px; }
+    header p { color: #666; font-size: 1.1rem; }
+    header .links { margin-top: 16px; font-size: 1rem; }
+    header .links a { margin: 0 8px; }
+
+    section {
+      background: #ffffff;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    h3 { margin-top: 12px; margin-bottom: 6px; }
+
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    p { margin-bottom: 10px; }
+
+    pre {
+      background: #1e1e1e;
+      color: #00ff9c;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    a { color: #0077cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid #eee;
+    }
+    th { background: #f5f7fa; font-weight: 600; }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AEGIS</h1>
+  <p>AI Trust &amp; Evaluation Framework &middot; governance, evaluation, and safety for agentic systems</p>
+  <p class="links">
+    <a href="https://aegis.dmiruke.dev/docs">Live API</a> &middot;
+    <a href="https://github.com/dattamiruke/aegis.dmiruke.dev">Source</a> &middot;
+    <a href="https://dmiruke.dev/">Portfolio</a>
+  </p>
+</header>
+
+<main>
+
+<section>
+  <h2>About</h2>
+  <p>AEGIS is a <strong>governance, evaluation, and safety layer</strong> for agentic AI systems. It sits between application code and the LLM/agent runtime, enforcing policy, scoring outputs, and surfacing the evidence trail an auditor or platform team needs.</p>
+  <ul>
+    <li>Evaluation pipelines &mdash; RAGAS, DeepEval, custom rubrics</li>
+    <li>Policy enforcement &mdash; OPA/Rego at request and response boundaries</li>
+    <li>Multi-agent validation &mdash; planner / executor / critic with deterministic handoff</li>
+    <li>Observability + scoring &mdash; every call traced, scored, and queryable</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Architecture</h2>
+  <pre>User
+  &rarr; API Gateway
+    &rarr; LLM Control Plane
+      &rarr; Agent Orchestrator
+        &rarr; Tool Execution
+        &rarr; Memory (Vector + Metadata)
+      &rarr; Observability + Evaluation
+      &rarr; Policy Enforcement (OPA / RBAC)</pre>
+</section>
+
+<section>
+  <h2>API</h2>
+  <p>Interactive Swagger UI: <a href="https://aegis.dmiruke.dev/docs">aegis.dmiruke.dev/docs</a></p>
+  <table>
+    <thead>
+      <tr><th>Method</th><th>Endpoint</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>POST</code></td><td><code>/v1/evaluate</code></td><td>Run an evaluation rubric against an LLM trace</td></tr>
+      <tr><td><code>POST</code></td><td><code>/v1/policy/check</code></td><td>Evaluate a request/response against active OPA policies</td></tr>
+      <tr><td><code>GET</code></td><td><code>/v1/scores/{trace_id}</code></td><td>Retrieve scores for a recorded trace</td></tr>
+      <tr><td><code>GET</code></td><td><code>/v1/policies</code></td><td>List active policies</td></tr>
+      <tr><td><code>GET</code></td><td><code>/healthz</code></td><td>Liveness probe</td></tr>
+    </tbody>
+  </table>
+  <p><em>Endpoints are illustrative &mdash; canonical spec at <a href="https://aegis.dmiruke.dev/openapi.json"><code>/openapi.json</code></a>.</em></p>
+</section>
+
+<section>
+  <h2>Quick Start</h2>
+  <pre># Hit the live API
+curl https://aegis.dmiruke.dev/healthz
+
+# Evaluate a trace
+curl -X POST https://aegis.dmiruke.dev/v1/evaluate \
+  -H "Content-Type: application/json" \
+  -d '{"trace_id": "demo", "rubric": "faithfulness"}'
+
+# Or run it locally
+git clone https://github.com/dattamiruke/aegis.dmiruke.dev
+cd aegis.dmiruke.dev
+docker compose up</pre>
+</section>
+
+<section>
+  <h2>Core Stack</h2>
+  <ul>
+    <li>Python, FastAPI, Docker</li>
+    <li>OPA (Rego) for policy-as-code</li>
+    <li>RAGAS, DeepEval for LLM evaluation</li>
+    <li>OpenTelemetry, Prometheus for observability</li>
+    <li>Hetzner + nginx (TLS via Let's Encrypt)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Status</h2>
+  <ul>
+    <li><strong>Hosted on:</strong> Hetzner (FastAPI behind nginx)</li>
+    <li><strong>Source:</strong> <a href="https://github.com/dattamiruke/aegis.dmiruke.dev">github.com/dattamiruke/aegis.dmiruke.dev</a></li>
+    <li><strong>Author:</strong> Dattaram Miruke &mdash; Principal AI Platform Architect</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; Dattaram Miruke &middot;
+    <a href="https://dmiruke.dev/">Portfolio</a> &middot;
+    <a href="https://github.com/dattamiruke">GitHub</a> &middot;
+    <a href="https://www.linkedin.com/in/dattamiruke/">LinkedIn</a>
+  </p>
+</footer>
+
+</body>
+</html>
